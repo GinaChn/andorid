@@ -1,7 +1,10 @@
+/*
+ * Copyright (c) 2016 Gina, All rights reserved.
+ */
 import java.io.File;
 
 /**
- * Created by Gerard on 16/4/24.
+ * Created by Gina on 16/4/24.
  */
 public class ExplorerEncryptionTest {
     public static void main(String[] args)

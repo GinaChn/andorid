@@ -1,7 +1,11 @@
+/*
+ * Copyright (c) 2016 Gina, All rights reserved.
+ */
+
 import java.io.*;
 
 /**
- * Created by Gerard on 16/4/24.
+ * Created by Gina on 16/4/24.
  */
 public class FileReader {
         public static void readFileByChars(File file) {
