@@ -16,6 +16,7 @@ public class EncryptionRules {
     {
          filesNeedToEncrypt=new ArrayList();
          filesNeedToEncrypt.add("file_log.txt");
+        //如果更多的文件需要解密,直接在下边添加    filesNeedToEncrypt.add("文件名"); 就可以了
     }
 
 
