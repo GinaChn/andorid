@@ -45,7 +45,11 @@ public class FileReader {
             if (tempList[i].isFile()) {
                 //System.out.println("文     件：" + tempList[i]);
                 if (!tempList[i].getName().startsWith(".")) {
-                    oldFiles.put(tempList[i].getName(), FileReader.readFileByChars(tempList[i]));
+                    if (EncryptionRules.isFileNeedToDecrypt(tempList[i])) {
+                        oldFiles.put(tempList[i].getName(), FileReader.readFileByChars(AndroidEncryption.decrypt(tempList[i])));
+                    } else {
+                        oldFiles.put(tempList[i].getName(), FileReader.readFileByChars(tempList[i]));
+                    }
                 }
             }
         }
