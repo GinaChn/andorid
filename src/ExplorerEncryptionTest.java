@@ -25,6 +25,9 @@ public class ExplorerEncryptionTest {
         if(oldFileMap.size()!=newFileMap.size())
         {
             System.out.println("文件数目不相等!");
+            System.out.println("原文件夹下共有"+oldFileMap.size()+"个文件");
+            System.out.println("新文件夹下共有"+newFileMap.size()+"个文件");
+
         }
         Iterator<String> keys = oldFileMap.keySet().iterator();
         while (keys.hasNext())
