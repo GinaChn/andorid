@@ -18,9 +18,10 @@ public class ExplorerEncryptionTest {
 
         String newPath="document/";
         String oldPath="document_old/";
+        EncryptionRules.init();
 
-        Map<String,String> oldFileMap=FileReader.convertFileInfoToMap(oldPath);
-        Map<String,String> newFileMap=FileReader.convertFileInfoToMap(newPath);
+        Map<String,String> oldFileMap=FileReader.convertFileInfoToMap(oldPath,false);
+        Map<String,String> newFileMap=FileReader.convertFileInfoToMap(newPath,true);
 
         if(oldFileMap.size()!=newFileMap.size())
         {

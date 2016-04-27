@@ -12,7 +12,7 @@ import java.util.List;
 public class EncryptionRules {
 
     private static List<String > filesNeedToEncrypt;
-    public void init()
+    public static void init()
     {
          filesNeedToEncrypt=new ArrayList();
          filesNeedToEncrypt.add("file_log.txt");

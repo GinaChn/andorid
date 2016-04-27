@@ -34,7 +34,7 @@ public class FileReader {
         return result.toString();
     }
 
-    public static Map<String, String> convertFileInfoToMap(String path) {
+    public static Map<String, String> convertFileInfoToMap(String path,boolean isNewVersion) {
         Map<String, String> oldFiles = new HashMap();
 
         File file = new File(path);
@@ -45,7 +45,7 @@ public class FileReader {
             if (tempList[i].isFile()) {
                 //System.out.println("文     件：" + tempList[i]);
                 if (!tempList[i].getName().startsWith(".")) {
-                    if (EncryptionRules.isFileNeedToDecrypt(tempList[i])) {
+                    if (EncryptionRules.isFileNeedToDecrypt(tempList[i])&& isNewVersion) {
                         oldFiles.put(tempList[i].getName(), FileReader.readFileByChars(AndroidEncryption.decrypt(tempList[i])));
                     } else {
                         oldFiles.put(tempList[i].getName(), FileReader.readFileByChars(tempList[i]));
