@@ -39,10 +39,10 @@ public class FileReader {
         File file=new File(path);
         //定义file类型数组
         File[] tempList = file.listFiles();
-        System.out.println("该目录下对象个数："+tempList.length);
+        //System.out.println("该目录下对象个数："+tempList.length);
         for (int i = 0; i < tempList.length; i++) {
             if (tempList[i].isFile()) {
-                System.out.println("文     件：" + tempList[i]);
+                //System.out.println("文     件：" + tempList[i]);
                 oldFiles.put(tempList[i].getName(),FileReader.readFileByChars(tempList[i]));
             }
         }
