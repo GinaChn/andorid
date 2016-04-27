@@ -1,8 +1,6 @@
 /*
  * Copyright (c) 2016 Gina, All rights reserved.
  */
-import java.io.File;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
